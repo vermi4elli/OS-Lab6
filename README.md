@@ -103,12 +103,12 @@ Then I added needed changes to the code see the performance of the app. Decided 
 ## The changes to see the performance
 I added some lines with ```high_resolution_clock``` to measure the performance.
 The resulting files with code are in the repository.
-## The results of the unoptimized code
+## The results of the unoptimized code (two runs with ```DrawDogs()``` and ```DrawCats()```)
 ![The unoptimized program's time data](/images/unoptimized.jpg "The unoptimized program's time data")
 ## The changes to the code to optimize it
 + First of all, I changed the loops from 0 -> i to i -> 0 as it would be faster, comparing the values with 0 always.
 + Next, I changed the ```int i = ...``` in the ```for``` loops to a ```register int i = ...``` as it should suggest the compiler to store this value in the registers.
-## The time results of the optimized code
+## The time results of the optimized code (two runs with ```DrawDogs()``` and ```DrawCats()```)
 ![The optimized program's time data](/images/optimized.jpg "The optimized program's time data")
 ## The results
 So, the results are here: due to the fact there's no memory optimization to be done, I did the little I could. That didn't help on the little data examples and is not likely to influence the data results a lot. Due to the structure of the original code, there's nothing more to be done, if not to change the logic entirely.
